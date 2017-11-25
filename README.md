@@ -18,12 +18,23 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 - Ouvrez l'onglet de l'editeur ci-dessous (double click sur l'icone du module).<img src="../master/images/liveboxconfig.PNG" width="50%" height="50%"/>
 
-- Renseigner :
+- Renseigner les champs :
 
-  - L'adresse **IP** du décodeur.
-  - Le numéro du **port** qui est le **8080** par défaut, n'est généralement pas à changer !
+  - <code>Host</code> : L'adresse **IP** du décodeur.
+  - <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
 
 ### Inputs
+
+Aprés reconnaissance vocale, le node **SARAH** retourne un objet {JSON} du type suivant :
+
+```json
+valeur pour commande (clé = "cmd")
+
+options {
+  plugin: "livebox",
+  cmd: "a\_decoder\_command"
+}
+```
 
 - `msg.payload.options.plugin` : {string} **"livebox"**.
 
