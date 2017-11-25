@@ -19,7 +19,9 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 ## Configuration du module <img src="../master/images/liveboxnode.PNG" width="10%" height="10%"/>
 
-- Ouvrez l'onglet de l'editeur ci-dessous.<img src="../master/images/liveboxconfig.PNG" width="50%" height="50%"/>
+- Ouvrez l'onglet de l'editeur comme ci-dessous.
+
+  <img src="../master/images/liveboxconfig.PNG" width="50%" height="50%"/>
 
 - Renseigner les champs :
 
