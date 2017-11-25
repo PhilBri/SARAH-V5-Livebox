@@ -23,6 +23,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
   - L'adresse **IP** du décodeur.
   - Le numéro du **port** qui est le **8080** par défaut, n'est généralement pas à changer !
 
+
 ### Inputs
 
 - `msg.payload.options.plugin` : {string} **"livebox"**.
@@ -71,6 +72,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 - Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
 - Parmis les principales nous avons :
+
     sarah {allumes,eteins} la {box,livebox}
 
     sarah mets {la, la chaine, le programme} {3, france 3}
