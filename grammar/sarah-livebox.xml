@@ -1,7 +1,5 @@
 <grammar version="1.0" xml:lang="fr-FR" mode="voice"  root="ruleLivebox" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
 
-
-
 <!------------ Main ------------>
 
     <rule id="ruleLivebox" scope="public">
@@ -27,11 +25,7 @@
         <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
     </rule>
 
-
-
 <!------------ Rules ------------>
-
-
 
     <!-- On/Off -->
 
@@ -48,8 +42,6 @@
         <item><ruleref uri="#ruleName"/></item>
         <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
     </rule>
-
-
 
     <!-- Up & Dwn Channels -->
 
@@ -90,8 +82,6 @@
 
     </rule>
 
-
-
     <!-- Sound -->
 
     <rule id="ruleSound" scope="public">
@@ -114,8 +104,6 @@
         <item><ruleref uri="#ruleName"/></item>
         <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
     </rule>
-
-
 
     <!-- Digits -->
 
@@ -158,8 +146,6 @@
         <item repeat="0-1"><ruleref uri="#ruleName"/></item>
         <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
     </rule>
-
-
 
     <!-- Set channels -->
 
@@ -417,8 +403,6 @@
         <item repeat="0-1"><ruleref uri="#ruleName"/></item>
         <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
     </rule> 
-
-
 
     <!-- Add plugin reference at the end of sentence -->
 
