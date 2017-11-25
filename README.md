@@ -25,7 +25,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 ### Inputs
 
-Aprés reconnaissance vocale, le node **SARAH** retourne un objet {JSON} du type suivant :
+Aprés reconnaissance vocale, le node **SARAH** retourne via `msg.payload` un objet {JSON} du type suivant :
 
 ```json
 valeur pour commande (clé = "cmd")
@@ -63,7 +63,7 @@ options {
 
    - Retour de la livebox concernant la commande envoyée.
   
-    ```JSON
+    ```json
     Exemple de retour si commande envoyée OK...
     {
       "result":
