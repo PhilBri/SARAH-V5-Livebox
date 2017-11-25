@@ -42,14 +42,14 @@ Aprés reconnaissance vocale, le node **SARAH** retourne l'objet suivant selon l
         }
     }
     ```
-La valeur **plugin** est toujours présente dans le retour.
+#### La valeur *`plugin`* est toujours présente dans le reour.
 
 - `msg.payload.options.plugin` : {string} **"livebox"**.
 
   - A utiliser avec un module **switch** pour rediriger vers le bon plugin...
   - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**
   
-Les valeurs **stby**, **cmd** et **epg** sont présentes suivants les cas et les commandes à envoyer à la livebox.
+### Les valeurs **stby**, **cmd** et **epg** sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
 
 - `msg.payload.options.stby` : {string} **"0"** ou **"1"**
 
