@@ -2,7 +2,7 @@
 
 > Node-RED node to connect Sarah framework to Orange Livebox TV decoder.
 >
-> <img src="/icons/liveboxnode.svg" width="20%" height="20%"/>
+> <img src="/images/liveboxnode.svg" width="20%" height="20%"/>
 
 ### Module Node-Red pour S.A.R.A.H V5
 
@@ -17,11 +17,11 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 - Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
 
-## Configuration du module <img src="/icons/liveboxnode.svg" width="13%" height="13%"/>
+## Configuration du module <img src="/images/liveboxnode.svg" width="13%" height="13%"/>
 
 - Ouvrez l'onglet de l'editeur comme ci-dessous.
 
-  <img src="../master/images/liveboxconfig.PNG" width="50%" height="50%"/>
+  <img src="/images/liveboxconfig.PNG" width="50%" height="50%"/>
 
 - Renseigner les champs :
 
