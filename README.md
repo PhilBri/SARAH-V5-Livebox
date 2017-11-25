@@ -17,78 +17,45 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 ### Configuration du module :
 
-- Editez le module .
+- Ouvrez l'onglet de l'editeur ci-dessous (double click sur l'icone du module).
 
 <img src="../master/images/liveboxconfig.PNG" width="50%" height="50%"/>
 
-![GitHub Logo](../master/images/liveboxconfig.png)
-
-Copier le fichier xml **./grammar/sarah-domoticz.xml** dans le dossier grammar configuré sur le module **win-sarah**
-
-modifier le fichier **sarah-domoticz.xml** pour qu'il corresponde à vos equipements sur domoticz
-
-`out.action.plugin` ==> utilisé comme discriminant pour identifier le plugin
-
-`out.action.device` ==> id du périphérique dans domoticz
-
-`out.action.command` ==> **switch** / **status** en fonction de l'action à réaliser. (Piloter un périphérique ou recevoir un état)
-
-`out.action.type` ==> **light** ou **scene**
-	
-`out.action.action` ==> **On** / **Off** / **temp** / **humidity**
-
-dans le cas de plusieurs plugins utiliser un module **switch** avec comme discriminant `msg.payload.options.plugin` renvoyé par **win-sarah** (ici **domticz-http**)
-
-![GitHub Logo](/images/switch.png)
-
-![GitHub Logo](/images/flow_all.png)
+- Renseigner :
+  - L'adresse **IP** du décodeur.
+  - Le numéro du **port** qui est le **8080** par défaut n'est généralement pas à changer !
 
 ### Inputs
 
 - `msg.payload.options.plugin`:
-
-à utiliser avec un module **switch** pour rediriger vers le bon plugin
-
-valeur de `out.action.plugin` du fichier **sarah-domoticz.xml**
+**livebox**
+  - A utiliser avec un module **switch** pour rediriger vers le bon plugin...
+  - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**
 
 - `msg.payload.options.action`:
 
 **On** / **Off** / **temp** / **humidity**
 
-valeur de `out.action.action` du fichier **sarah-domoticz.xml**
+valeur de `out.action.action` du fichier **sarah-livebox.xml**
 
 - `msg.payload.options.command`:
 
 **switch** / **status**
 
-valeur de `out.action.command` du fichier **sarah-domoticz.xml**
-
-- `msg.payload.options.device`:
-
-**id** du device dans domoticz
-
-valeur de `out.action.device` du fichier **sarah-domoticz.xml**
-
-- `msg.payload.options.type`:
-
-**light** / **scene**
-
-valeur de `out.action.type` du fichier **sarah-domoticz.xml**
+valeur de `out.action.command` du fichier **sarah-livebox.xml**
 
 ### Outputs
 
-- `msg.payload`: renvoyé par win-sarah
+- Objet JSON `msg.payload`: renvoyé par win-sarah
 
-- `msg.speak`: texte à lire par win-speak(ou autre)
-
-![GitHub Logo](/images/speak1.png)
+- Objet JSON `msg.speak`: texte à lire par win-speak (ou autre).
 
 ### Utilisation:
 
-sarah allumes/eteins le salon
+sarah {allumes,eteins} la {box,livebox}
 
-sarah mets rmc
+sarah mets {la, la chaine, le programme} {3, france 3}
 
-sarah quelle est la température/humidité du salon
+sarah appui sur la touche 1 de la {box, livebox}
 
-sarah comment est le salon
+sarah monte le son de la {box, livebox}
