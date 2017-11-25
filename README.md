@@ -28,14 +28,14 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 ### Inputs
 
-- `msg.payload.options.plugin`=> **livebox**
+- `msg.payload.options.plugin`=> **livebox**.
 
   - A utiliser avec un module **switch** pour rediriger vers le bon plugin...
   - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**
 
 - `msg.payload.options.stby`=> **Retour d'état**
 
-  - Livebox allumée ou en veille ?
+  - Teste l'état de la Livebox : allumée ou en veille.
   - Valeur de `out.action.stby` du fichier **sarah-livebox.xml**
 
 - `msg.payload.options.cmd`=> **Commandes générales**.
@@ -44,12 +44,16 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
   - Valeur de `out.action.cmd` du fichier **sarah-livebox.xml**.
   
 - `msg.payload.options.epg`=> **Appel direct des chaînes**.
+
   - Permet d'appeler une chaîne directement, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
   - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
 
 ### Outputs
 
-- `msg.payload`: renvoyé par le node <code>SARAH</code</code> (win-sarah)
+- `msg.payload`=> **Résultat de l'action**
+
+  - Retour de la livebox concernant la commande envoyée.
+    - Exemple si ok :
 
 - `msg.speak`: texte à lire par le node <code>Speak</code> (win-speak), ou autre...
 
