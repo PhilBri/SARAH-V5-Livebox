@@ -50,10 +50,10 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 - `msg.payload`=> {JSON} **"result"**
 
-  - Retour de la livebox concernant la commande envoyée.
-    - Exemple si commande OK :
+     - Retour de la livebox concernant la commande envoyée.
   
     ```JSON
+    Exemple de retour si commande envoyée OK...
     {
       "result":
         {
