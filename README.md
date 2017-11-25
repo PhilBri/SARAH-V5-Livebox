@@ -20,7 +20,6 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 ## Configuration du module <img src="../master/images/liveboxnode.PNG" width="10%" height="10%"/>
 
 - Ouvrez l'onglet de l'editeur ci-dessous.<img src="../master/images/liveboxconfig.PNG" width="50%" height="50%"/>
-###### _(double click sur l'icone du module)_.
 
 - Renseigner les champs :
 
