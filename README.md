@@ -1,6 +1,6 @@
 # SARAH-V5-Livebox
 
-![GitHub Logo](/images/livebox-node.jpg)
+![GitHub Logo](/images/liveboxnode.png)
 
 Node-RED node to connect Sarah framework to Orange Livebox TV decoder ![GitHub Logo](/images/livebox-node.jpg)
 
