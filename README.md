@@ -8,7 +8,7 @@
 
 Le module `LiveboxRemote` permet d'émuler la télécommande du décodeur TV Livebox.
 
-### Installation
+## Installation
 
 - Télécharger, extraire puis copier le repertoire **Livebox-V5** dans le dossier `\sarah\viseo-bot-framework\node_modules\`.
 
@@ -17,7 +17,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 - Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
 
-### Configuration du module
+## Configuration du module
 
 - Ouvrez l'onglet de l'editeur ci-dessous (double click sur l'icone du module).<img src="../master/images/liveboxconfig.PNG" width="50%" height="50%"/>
 
@@ -26,7 +26,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
   - <code>Host</code> : L'adresse **IP** du décodeur.
   - <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
 
-### Inputs
+## Inputs
 
 Aprés reconnaissance vocale, le node **SARAH** retourne l'objet suivant selon les directives notées dans le fichier **sarah-livebox.xml**.
 
@@ -66,7 +66,7 @@ Les valeurs **stby**, **cmd** et **epg** sont présentes suivants les cas et les
   - Permet d'appeler une chaîne directement grâce à son code **EPG**, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
   - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
 
-### Outputs
+## Outputs
 
 - `msg.payload` : {JSON} **"result"**
 
@@ -88,7 +88,7 @@ Les valeurs **stby**, **cmd** et **epg** sont présentes suivants les cas et les
 
   - Texte à lire par le node <code>Speak</code> (win-speak), ou autre...
 
-### Utilisation
+## Utilisation
 
 - Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
 - Exemples :
@@ -101,11 +101,11 @@ Les valeurs **stby**, **cmd** et **epg** sont présentes suivants les cas et les
 
     ```sarah monte le son de la {box, livebox}```
 
-### Compatibilité
+## Compatibilité
 
 Normalement, tous les decodeurs Orange Livebox sont compatibles.
 
-### Restrictions
+## Restrictions
 
 Le décodeur TV V4 ne peux pas (pour l'instant) être allumé lorsqu'il est en veille profonde...
 Il vous faudra donc l'allumer manuelement avant de l'utiliser...
