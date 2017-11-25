@@ -1,0 +1,437 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice"  root="ruleLivebox" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
+
+
+<!------------ Main ------------>
+
+    <rule id="ruleLivebox" scope="public">
+        <item>Sarah</item>
+
+        <one-of>
+            <!-- On/Off -->
+            <item><ruleref uri="#ruleOnOff"/><tag>out.action=rules.latest();</tag></item>
+
+            <!-- Up & Dwn Channels -->
+            <item><ruleref uri="#ruleUpDwn"/><tag>out.action=rules.latest();</tag></item>
+
+            <!-- Sound -->
+            <item><ruleref uri="#ruleSound"/><tag>out.action=rules.latest();</tag></item>
+
+            <!-- Digits -->
+            <item><ruleref uri="#ruleDigits"/><tag>out.action=rules.latest();</tag></item>
+
+            <!-- Set channels -->
+            <item><ruleref uri="#ruleChannels"/><tag>out.action=rules.latest();</tag></item>
+        </one-of>
+
+        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
+    </rule>
+
+
+
+<!------------ Rules ------------>
+
+
+
+    <!-- On/Off -->
+
+    <rule id="ruleOnOff" scope="public">
+        <tag>out.action=new Object();</tag>
+
+        <one-of>
+            <item>allume<tag>out.action.stby='0';out.action.cmd="Shutdown";</tag></item>
+            <item>met<tag>out.action.stby='0';out.action.cmd="Shutdown";</tag></item>
+            <item>éteint<tag>out.action.stby='1';out.action.cmd="Shutdown";</tag></item>
+            <item>coupe<tag>out.action.stby='1';out.action.cmd="Shutdown";</tag></item>
+        </one-of>
+
+        <item><ruleref uri="#ruleName"/></item>
+        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
+    </rule>
+
+
+
+    <!-- Up & Dwn Channels -->
+
+    <rule id="ruleUpDwn" scope="public">
+        <tag>out.action=new Object();</tag>
+
+        <one-of>
+            <item>Met</item>
+            <item>Passe</item>
+            <item>zap</item>
+        </one-of>
+
+        <one-of>
+            <item>le</item>
+            <item>la</item>
+            <item>a</item>
+            <item>au</item>
+            <item>sur le</item>
+            <item>sur la</item>
+        </one-of>
+
+        <one-of>
+            <item>Programme</item>
+            <item>Chaine</item>
+        </one-of>
+
+        <one-of>
+            <item>suivant<tag>out.action.cmd="PrgUp"</tag></item>
+            <item>suivante<tag>out.action.cmd="PrgUp"</tag></item>
+            <item>d'après<tag>out.action.cmd="PrgUp"</tag></item>
+            <item>précédent<tag>out.action.cmd="PrgDwn"</tag></item>
+            <item>précédente<tag>out.action.cmd="PrgDwn"</tag></item>
+            <item>d'avant<tag>out.action.cmd="PrgDwn"</tag></item>
+        </one-of>
+
+        <item repeat="0-1"><ruleref uri="#ruleName"/></item>
+        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
+
+    </rule>
+
+
+
+    <!-- Sound -->
+
+    <rule id="ruleSound" scope="public">
+        <tag>out.action=new Object();</tag>
+
+        <one-of>
+            <item>Monte<tag>out.action.cmd="VolUp";</tag></item>
+            <item>Augmente<tag>out.action.cmd="VolUp";</tag></item>
+            <item>Baisse<tag>out.action.cmd="VolDwn";</tag></item>
+            <item>Diminue<tag>out.action.cmd="VolDwn";</tag></item>
+            <item>Coupe<tag>out.action.cmd="Mute";</tag></item>
+            <item>Remet<tag>out.action.cmd="Mute";</tag></item>
+        </one-of>
+
+        <one-of>
+            <item>le son</item>
+            <item>le volume</item>
+        </one-of>
+
+        <item><ruleref uri="#ruleName"/></item>
+        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
+    </rule>
+
+
+
+    <!-- Digits -->
+
+    <rule id="ruleDigits" scope="public">
+        <tag>out.action=new Object();</tag>
+
+        <one-of>
+            <item>Appuie</item>
+            <item>Touche</item>
+        </one-of>
+
+        <item repeat="0-1">
+            <one-of>
+                <item>sur</item>
+                <item>sur la touche</item>
+            </one-of>
+        </item>
+
+        <one-of>
+            <item>0<tag>out.action.cmd="0"</tag></item>
+            <item>1<tag>out.action.cmd="1"</tag></item>
+            <item>2<tag>out.action.cmd="2"</tag></item>
+            <item>3<tag>out.action.cmd="3"</tag></item>
+            <item>4<tag>out.action.cmd="4"</tag></item>
+            <item>5<tag>out.action.cmd="5"</tag></item>
+            <item>6<tag>out.action.cmd="6"</tag></item>
+            <item>7<tag>out.action.cmd="7"</tag></item>
+            <item>8<tag>out.action.cmd="8"</tag></item>
+            <item>9<tag>out.action.cmd="9"</tag></item>
+            <item>home<tag>out.action.cmd="Home";</tag></item>
+            <item>haut<tag>out.action.cmd="Up"</tag></item>
+            <item>bas<tag>out.action.cmd="Down"</tag></item>
+            <item>droite<tag>out.action.cmd="Right"</tag></item>
+            <item>gauche<tag>out.action.cmd="Left"</tag></item>
+            <item>OK<tag>out.action.cmd="Ok"</tag></item>
+            <item>retour<tag>out.action.cmd="Exit"</tag></item>
+            <item>V O D<tag>out.action.cmd="VOD"</tag></item>
+        </one-of>
+
+        <item repeat="0-1"><ruleref uri="#ruleName"/></item>
+        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
+    </rule>
+
+
+
+    <!-- Set channels -->
+
+    <rule id="ruleChannels" scope="public">
+        <tag>out.action=new Object();</tag>
+
+        <one-of>
+            <item>Mets</item>
+            <item>bascule</item>
+            <item>Affiche</item>
+            <item>Zap</item>
+        </one-of>
+
+        <item repeat="0-1">
+            <one-of>
+                <item>sur</item>
+                <item>la</item>
+                <item>le</item>
+                <item>sur la</item>
+                <item>sur le</item>
+            </one-of>
+        </item>
+
+        <item repeat="0-1">
+            <one-of>
+                <item>chaine</item>
+                <item>programme</item>
+            </one-of>
+        </item>
+
+        <one-of>
+            <item>1<tag>out.action.epg = "192";</tag></item>
+            <item>TF1<tag>out.action.epg = "192";</tag></item>
+
+            <item>2<tag>out.action.epg = "4";</tag></item>
+            <item>France 2<tag>out.action.epg = "4";</tag></item>
+
+            <item>3<tag>out.action.epg = "80";</tag></item>
+            <item>France 3<tag>out.action.epg = "80";</tag></item>
+
+            <item>4<tag>out.action.epg = "34";</tag></item>
+            <item>Canal +<tag>out.action.epg = "34";</tag></item>
+
+            <item>5<tag>out.action.epg = "47";</tag></item>
+            <item>France 5<tag>out.action.epg = "47";</tag></item>
+
+            <item>6<tag>out.action.epg = "118";</tag></item>
+            <item>M6<tag>out.action.epg = "118";</tag></item>
+
+            <item>7<tag>out.action.epg = "111";</tag></item>
+            <item>Arte<tag>out.action.epg = "111";</tag></item>
+
+            <item>8<tag>out.action.epg = "445";</tag></item>
+            <item>D8<tag>out.action.epg = "445";</tag></item>
+
+            <item>9<tag>out.action.epg = "119";</tag></item>
+            <item>W9<tag>out.action.epg = "119";</tag></item>
+
+            <item>10<tag>out.action.epg = "195";</tag></item>
+            <item>TMC<tag>out.action.epg = "195";</tag></item>
+
+            <item>11<tag>out.action.epg = "446";</tag></item>
+            <item>NT1<tag>out.action.epg = "446";</tag></item>
+
+            <item>12<tag>out.action.epg = "444";</tag></item>
+            <item>NRJ 12<tag>out.action.epg = "444";</tag></item>
+
+            <item>13<tag>out.action.epg = "234";</tag></item>
+            <item>LCP<tag>out.action.epg = "234";</tag></item>
+
+            <item>14<tag>out.action.epg = "78";</tag></item>
+            <item>France 4<tag>out.action.epg = "78";</tag></item>
+
+            <item>15<tag>out.action.epg = "481";</tag></item>
+            <item>BFM TV<tag>out.action.epg = "481";</tag></item>
+
+            <item>16<tag>out.action.epg = "226";</tag></item>
+            <item>i>Télé<tag>out.action.epg = "226";</tag></item>
+
+            <item>17<tag>out.action.epg = "458";</tag></item>
+            <item>D 17<tag>out.action.epg = "458";</tag></item>
+
+            <item>18<tag>out.action.epg = "482";</tag></item>
+            <item>Gulli<tag>out.action.epg = "482";</tag></item>
+
+            <item>19<tag>out.action.epg = "160";</tag></item>
+            <item>France Ô<tag>out.action.epg = "160";</tag></item>
+
+            <item>20<tag>out.action.epg = "1404";</tag></item>
+            <item>HD 1<tag>out.action.epg = "1404";</tag></item>
+
+            <item>21<tag>out.action.epg = "1401";</tag></item>
+            <item>L'équipe 21<tag>out.action.epg = "1401";</tag></item>
+
+            <item>22<tag>out.action.epg = "1403";</tag></item>
+            <item>6 ter<tag>out.action.epg = "1403";</tag></item>
+
+            <item>23<tag>out.action.epg = "1402";</tag></item>
+            <item>Numéro 23<tag>out.action.epg = "1402";</tag></item>
+
+            <item>24<tag>out.action.epg = "1400";</tag></item>
+            <item>RMC Découverte<tag>out.action.epg = "1400";</tag></item>
+
+            <item>25<tag>out.action.epg = "1399";</tag></item>
+            <item>Chérie 25<tag>out.action.epg = "1399";</tag></item>
+
+            <item>26<tag>out.action.epg = "191";</tag></item>
+            <item>Téva<tag>out.action.epg = "191";</tag></item>
+
+            <item>27<tag>out.action.epg = "205";</tag></item>
+            <item>TV5 Monde<tag>out.action.epg = "205";</tag></item>
+
+            <item>28<tag>out.action.epg = "145";</tag></item>
+            <item>Paris Première<tag>out.action.epg = "145";</tag></item>
+
+            <item>29<tag>out.action.epg = "115";</tag></item>
+            <item>RTL9<tag>out.action.epg = "115";</tag></item>
+
+            <item>30<tag>out.action.epg = "5";</tag></item>
+            <item>AB1<tag>out.action.epg = "5";</tag></item>
+
+            <item>31<tag>out.action.epg = "225";</tag></item>
+            <item>Tv Breizh<tag>out.action.epg = "225";</tag></item>
+
+            <item>32<tag>out.action.epg = "33";</tag></item>
+            <item>Canal+ Cinéma<tag>out.action.epg = "33";</tag></item>
+
+            <item>33<tag>out.action.epg = "35";</tag></item>
+            <item>Canal+ Sport<tag>out.action.epg = "35";</tag></item>
+
+            <item>34<tag>out.action.epg = "657";</tag></item>
+            <item>Canal+ Family<tag>out.action.epg = "657";</tag></item>
+
+            <item>35<tag>out.action.epg = "30";</tag></item>
+            <item>Canal+ Décalé<tag>out.action.epg = "30";</tag></item>
+
+            <item>36<tag>out.action.epg = "730";</tag></item>
+            <item>OCS max<tag>out.action.epg = "730";</tag></item>
+
+            <item>37<tag>out.action.epg = "733";</tag></item>
+            <item>OCS City "génération HBO"<tag>out.action.epg = "733";</tag></item>
+
+            <item>38<tag>out.action.epg = "732";</tag></item>
+            <item>OCS choc<tag>out.action.epg = "732";</tag></item>
+
+            <item>39<tag>out.action.epg = "734";</tag></item>
+            <item>OCS géants<tag>out.action.epg = "734";</tag></item>
+
+            <item>40<tag>out.action.epg = "185";</tag></item>
+            <item>TCM<tag>out.action.epg = "185";</tag></item>
+
+            <item>41<tag>out.action.epg = "58";</tag></item>
+            <item>Disney Channel<tag>out.action.epg = "58";</tag></item>
+
+            <item>42<tag>out.action.epg = "321";</tag></item>
+            <item>Boomerang<tag>out.action.epg = "321";</tag></item>
+
+            <item>43<tag>out.action.epg = "924";</tag></item>
+            <item>Boing<tag>out.action.epg = "924";</tag></item>
+
+            <item>44<tag>out.action.epg = "64";</tag></item>
+            <item>Equidia Live<tag>out.action.epg = "64";</tag></item>
+
+            <item>45<tag>out.action.epg = "1146";</tag></item>
+            <item>Equidia Life<tag>out.action.epg = "1146";</tag></item>
+
+            <item>46<tag>out.action.epg = "15";</tag></item>
+            <item>AB Moteurs<tag>out.action.epg = "15";</tag></item>
+
+            <item>47<tag>out.action.epg = "1290";</tag></item>
+            <item>beIN SPORT 1<tag>out.action.epg = "1290";</tag></item>
+
+            <item>48<tag>out.action.epg = "1304";</tag></item>
+            <item>beIN SPORT 2<tag>out.action.epg = "1304";</tag></item>
+
+            <item>49<tag>out.action.epg = "76";</tag></item>
+            <item>Eurosport<tag>out.action.epg = "76";</tag></item>
+
+            <item>50<tag>out.action.epg = "439";</tag></item>
+            <item>Eurosport 2<tag>out.action.epg = "439";</tag></item>
+
+            <item>51<tag>out.action.epg = "1355";</tag></item>
+            <item>sport365<tag>out.action.epg = "1355";</tag></item>
+
+            <item>52<tag>out.action.epg = "415";</tag></item>
+            <item>Nautical Channel<tag>out.action.epg = "415";</tag></item>
+
+            <item>53<tag>out.action.epg = "112";</tag></item>
+            <item>LCI<tag>out.action.epg = "112";</tag></item>
+
+            <item>54<tag>out.action.epg = "529";</tag></item>
+            <item>France 24<tag>out.action.epg = "529";</tag></item>
+
+            <item>55<tag>out.action.epg = "451";</tag></item>
+            <item>Ushuaia TV<tag>out.action.epg = "451";</tag></item>
+
+            <item>56<tag>out.action.epg = "88";</tag></item>
+            <item>Histoire<tag>out.action.epg = "88";</tag></item>
+
+            <item>57<tag>out.action.epg = "12";</tag></item>
+            <item>Animaux<tag>out.action.epg = "12";</tag></item>
+
+            <item>58<tag>out.action.epg = "67";</tag></item>
+            <item>Escales<tag>out.action.epg = "67";</tag></item>
+
+            <item>59<tag>out.action.epg = "38";</tag></item>
+            <item>Chasse et pêche<tag>out.action.epg = "38";</tag></item>
+
+            <item>60<tag>out.action.epg = "7";</tag></item>
+            <item>Toute l'histoire<tag>out.action.epg = "7";</tag></item>
+
+            <item>61<tag>out.action.epg = "63";</tag></item>
+            <item>Encyclo<tag>out.action.epg = "63";</tag></item>
+
+            <item>62<tag>out.action.epg = "1000000";</tag></item>
+            <item>NoLife<tag>out.action.epg = "1000000";</tag></item>
+
+            <item>63<tag>out.action.epg = "87";</tag></item>
+            <item>Game One<tag>out.action.epg = "87";</tag></item>
+
+            <item>64<tag>out.action.epg = "6";</tag></item>
+            <item>Mangas<tag>out.action.epg = "6";</tag></item>
+
+            <item>65<tag>out.action.epg = "929";</tag></item>
+            <item>KZTV<tag>out.action.epg = "929";</tag></item>
+
+            <item>66<tag>out.action.epg = "325";</tag></item>
+            <item>TRACE Urban<tag>out.action.epg = "325";</tag></item>
+
+            <item>67<tag>out.action.epg = "605";</tag></item>
+            <item>NRJ Hits<tag>out.action.epg = "605";</tag></item>
+
+            <item>68<tag>out.action.epg = "453";</tag></item>
+            <item>M6 Music Hits<tag>out.action.epg = "453";</tag></item>
+
+            <item>69<tag>out.action.epg = "343";</tag></item>
+            <item>MCM Top<tag>out.action.epg = "343";</tag></item>
+
+            <item>70<tag>out.action.epg = "241";</tag></item>
+            <item>MCM Pop<tag>out.action.epg = "241";</tag></item>
+
+            <item>71<tag>out.action.epg = "753";</tag></item>
+            <item>Trace Tropical<tag>out.action.epg = "753";</tag></item>
+
+            <item>72<tag>out.action.epg = "53";</tag></item>
+            <item>CNN<tag>out.action.epg = "53";</tag></item>
+
+            <item>73<tag>out.action.epg = "19";</tag></item>
+            <item>BBC World<tag>out.action.epg = "19";</tag></item>
+
+            <item>74<tag>out.action.epg = "525";</tag></item>
+            <item>Al Jazeera English<tag>out.action.epg = "525";</tag></item>
+        </one-of>
+
+        <item repeat="0-1"><ruleref uri="#ruleName"/></item>
+        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
+    </rule> 
+
+
+
+    <!-- Add plugin reference at the end of sentence -->
+
+    <rule id="ruleName" scope="public">
+        <one-of>
+            <item>sur</item>
+            <item>de</item>
+        </one-of>
+
+        <one-of>
+            <item>la box</item>
+            <item>la livebox</item>
+        </one-of>
+    </rule>
+
+</grammar>
