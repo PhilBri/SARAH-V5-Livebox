@@ -17,11 +17,11 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 ### Configuration du module :
 
-- Renseigner l'adresse ip et le port du serveur domoticz.
+- Editez le module .
 
 <img src="../master/images/liveboxconfig.PNG" width="50%" height="50%"/>
 
-![GitHub Logo](/images/liveboxconfig.png)
+![GitHub Logo](../images/liveboxconfig.png)
 
 Copier le fichier xml **./grammar/sarah-domoticz.xml** dans le dossier grammar configuré sur le module **win-sarah**
 
