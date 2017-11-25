@@ -22,7 +22,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 - Renseigner :
 
   - L'adresse **IP** du décodeur.
-  - Le numéro du **port** qui est le **8080** par défaut n'est généralement pas à changer !
+-  - Le numéro du **port** qui est le **8080** par défaut n'est généralement pas à changer !
 
 ### Inputs
 
@@ -51,19 +51,18 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 - `msg.payload`=> {JSON} **"result"**
 
   - Retour de la livebox concernant la commande envoyée.
-  exemple:
+    - Exemple si commande OK :
   
-  ```JSON
-  {
-    "result":
-      {
-        "responseCode": "0",
-        "message": "ok",
-        "data":
-        {}
-      }
-  }
-  ```
+    ```JSON
+    {
+      "result":
+        {
+          "responseCode": "0",
+          "message": "ok",
+          "data": {}
+        }
+    }
+    ```
 
 - `msg.speak`: {JSON} **"tts"**
   - Texte à lire par le node <code>Speak</code> (win-speak), ou autre...
