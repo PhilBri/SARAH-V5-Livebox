@@ -1,52 +1,47 @@
-<grammar version="1.0" xml:lang="fr-FR" mode="voice"  root="ruleLivebox" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+<grammar version="1.0" xml:lang="fr-FR" mode="voice"  root="rulelivebox" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
 
-<!------------ Main ------------>
+<!-- Main -->
 
-    <rule id="ruleLivebox" scope="public">
+    <rule id="rulelivebox" scope="public">
         <item>Sarah</item>
 
         <one-of>
             <!-- On/Off -->
-            <item><ruleref uri="#ruleOnOff"/><tag>out.action=rules.latest();</tag></item>
-
+            <item><ruleref uri="#ruleOnOff"/></item>
             <!-- Up & Dwn Channels -->
-            <item><ruleref uri="#ruleUpDwn"/><tag>out.action=rules.latest();</tag></item>
-
+            <item><ruleref uri="#ruleUpDwn"/></item>
             <!-- Sound -->
-            <item><ruleref uri="#ruleSound"/><tag>out.action=rules.latest();</tag></item>
-
+            <item><ruleref uri="#ruleSound"/></item>
             <!-- Digits -->
-            <item><ruleref uri="#ruleDigits"/><tag>out.action=rules.latest();</tag></item>
-
+            <item><ruleref uri="#ruleDigits"/></item>
             <!-- Set channels -->
-            <item><ruleref uri="#ruleChannels"/><tag>out.action=rules.latest();</tag></item>
+            <item><ruleref uri="#ruleChannels"/></item>
         </one-of>
-
-        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
     </rule>
 
-<!------------ Rules ------------>
+<!-- Rules -->
 
     <!-- On/Off -->
 
     <rule id="ruleOnOff" scope="public">
         <tag>out.action=new Object();</tag>
+        <tag>out.action.plugin='livebox';</tag>
 
         <one-of>
-            <item>allume<tag>out.action.stby='0';out.action.cmd="Shutdown";</tag></item>
-            <item>met<tag>out.action.stby='0';out.action.cmd="Shutdown";</tag></item>
-            <item>éteint<tag>out.action.stby='1';out.action.cmd="Shutdown";</tag></item>
-            <item>coupe<tag>out.action.stby='1';out.action.cmd="Shutdown";</tag></item>
+            <item>Allume<tag>out.action.stby='0';out.action.cmd="Shutdown";</tag></item>
+            <item>Met<tag>out.action.stby='0';out.action.cmd="Shutdown";</tag></item>
+            <item>Eteint<tag>out.action.stby='1';out.action.cmd="Shutdown";</tag></item>
+            <item>Coupe<tag>out.action.stby='1';out.action.cmd="Shutdown";</tag></item>
         </one-of>
 
         <item><ruleref uri="#ruleName"/></item>
-        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
     </rule>
 
     <!-- Up & Dwn Channels -->
 
     <rule id="ruleUpDwn" scope="public">
         <tag>out.action=new Object();</tag>
+        <tag>out.action.plugin='livebox';</tag>
 
         <one-of>
             <item>Met</item>
@@ -78,14 +73,13 @@
         </one-of>
 
         <item repeat="0-1"><ruleref uri="#ruleName"/></item>
-        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
-
     </rule>
 
     <!-- Sound -->
 
     <rule id="ruleSound" scope="public">
         <tag>out.action=new Object();</tag>
+        <tag>out.action.plugin='livebox';</tag>
 
         <one-of>
             <item>Monte<tag>out.action.cmd="VolUp";</tag></item>
@@ -102,13 +96,13 @@
         </one-of>
 
         <item><ruleref uri="#ruleName"/></item>
-        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
     </rule>
 
     <!-- Digits -->
 
     <rule id="ruleDigits" scope="public">
         <tag>out.action=new Object();</tag>
+        <tag>out.action.plugin='livebox';</tag>
 
         <one-of>
             <item>Appuie</item>
@@ -144,13 +138,13 @@
         </one-of>
 
         <item repeat="0-1"><ruleref uri="#ruleName"/></item>
-        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
     </rule>
 
     <!-- Set channels -->
 
     <rule id="ruleChannels" scope="public">
         <tag>out.action=new Object();</tag>
+        <tag>out.action.plugin='livebox';</tag>
 
         <one-of>
             <item>Mets</item>
@@ -401,16 +395,17 @@
         </one-of>
 
         <item repeat="0-1"><ruleref uri="#ruleName"/></item>
-        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/LiveboxRemote";</tag>
     </rule> 
 
     <!-- Add plugin reference at the end of sentence -->
 
     <rule id="ruleName" scope="public">
-        <one-of>
-            <item>sur</item>
-            <item>de</item>
-        </one-of>
+        <item repeat="0-1">
+            <one-of>
+                <item>sur</item>
+                <item>de</item>
+            </one-of>
+        </item>
 
         <one-of>
             <item>la box</item>
