@@ -33,7 +33,7 @@ Aprés reconnaissance vocale, le node **SARAH** retourne l'objet suivant :
 - `msg.payload` : {JSON} **"options"**
 
   ```json
-  Exemple de retour pour envoyer la commande pour couper le son (mute)...
+  Exemple de retour = envoyer la commande pour couper le son (mute)...
   {
     options {
       plugin: "livebox",
@@ -69,7 +69,7 @@ Aprés reconnaissance vocale, le node **SARAH** retourne l'objet suivant :
    - Retour de la livebox concernant la commande envoyée.
   
     ```json
-    Exemple de retour si commande envoyée OK...
+    Exemple de retour = commande envoyée traitée et OK...
     {
       "result":
         {
