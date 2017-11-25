@@ -23,10 +23,10 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
   - L'adresse **IP** du décodeur.
   - Le numéro du **port** qui est le **8080** par défaut, n'est généralement pas à changer !
 
-
 ### Inputs
 
 - `msg.payload.options.plugin` : {string} **"livebox"**.
+
 
   - A utiliser avec un module **switch** pour rediriger vers le bon plugin...
   - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**
@@ -80,3 +80,12 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
     ```sarah appui sur la touche 1 de la {box, livebox}```
 
     ```sarah monte le son de la {box, livebox}```
+
+### Compatibilité
+
+Normalement, tous les decodeurs Orange Livebox sont compatibles.
+
+### Restrictions
+
+Le décodeur TV V4 ne peux pas (pour l'instant) être allumé lorsqu'il est en veille profonde...
+Il vous faudra donc l'allumer manuelement avant de l'utiliser...
