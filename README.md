@@ -32,16 +32,6 @@ Aprés reconnaissance vocale, le node **SARAH** retourne l'objet suivant :
 
 - `msg.payload` : {JSON} **"options"**
 
-  ```json
-  Exemple de retour = envoyer la commande pour couper le son (mute)...
-  {
-    options {
-      plugin: "livebox",
-      cmd: "Mute"
-    }
-  }
-```
-
 - `msg.payload.options.plugin` : {string} **"livebox"**.
 
   - A utiliser avec un module **switch** pour rediriger vers le bon plugin...
