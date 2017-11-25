@@ -12,14 +12,14 @@ Ce module `sarah-livebox` permet d'émuler la télécommande du décodeur TV Liv
 
 - Télécharger, extraire puis copier le repertoire **Livebox-V5** dans le dossier `\sarah\viseo-bot-framework\node_modules\`.
 - Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le module (node) **SARAH** (win-sarah).
-Par defaut : `sarah\viseo-bot-project\data\grammar`.
+Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 - Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
 
 ### Configuration du module :
 
-renseigner l'adresse ip et le port du serveur domoticz.
+- Renseigner l'adresse ip et le port du serveur domoticz.
 
-![GitHub Logo](/images/domoticz.png)
+![Config Module](../master/images/livebox config.png)
 
 Copier le fichier xml **./grammar/sarah-domoticz.xml** dans le dossier grammar configuré sur le module **win-sarah**
 
