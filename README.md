@@ -8,13 +8,13 @@ Le module `LiveboxRemote` permet d'émuler la télécommande du décodeur TV Liv
 
 <img src="../master/images/liveboxnode.PNG" width="20%" height="20%"/>
 
-### Installation :,
+### Installation
 - Télécharger, extraire puis copier le repertoire **Livebox-V5** dans le dossier `\sarah\viseo-bot-framework\node_modules\`.
 - Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le node **SARAH** (win-sarah).
 Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 - Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
 
-### Configuration du module :
+### Configuration du module
 
 - Ouvrez l'onglet de l'editeur ci-dessous (double click sur l'icone du module).<img src="../master/images/liveboxconfig.PNG" width="50%" height="50%"/>
 
@@ -67,12 +67,14 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
   - Texte à lire par le node <code>Speak</code> (win-speak), ou autre...
 
-### Utilisation:
+### Utilisation
 
-sarah {allumes,eteins} la {box,livebox}
+- Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
+- Parmis les principales nous avons :
+    sarah {allumes,eteins} la {box,livebox}
 
-sarah mets {la, la chaine, le programme} {3, france 3}
+    sarah mets {la, la chaine, le programme} {3, france 3}
 
-sarah appui sur la touche 1 de la {box, livebox}
+    sarah appui sur la touche 1 de la {box, livebox}
 
-sarah monte le son de la {box, livebox}
+    sarah monte le son de la {box, livebox}
