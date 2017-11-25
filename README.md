@@ -11,7 +11,7 @@ Le module `LiveboxRemote` permet d'émuler la télécommande du décodeur TV Liv
 ### Installation :
 
 - Télécharger, extraire puis copier le repertoire **Livebox-V5** dans le dossier `\sarah\viseo-bot-framework\node_modules\`.
-- Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le module (node) **SARAH** (win-sarah).
+- Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le node **SARAH** (win-sarah).
 Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 - Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
 
@@ -26,7 +26,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 ### Inputs
 
-- `msg.payload.options.plugin`=> **livebox**.
+- `msg.payload.options.plugin`=> {string} **"livebox"**.
 
   - A utiliser avec un module **switch** pour rediriger vers le bon plugin...
   - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**
