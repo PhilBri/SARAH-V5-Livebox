@@ -8,11 +8,13 @@ Node-RED node to connect Sarah framework to Orange Livebox TV decoder.
 
 Ce module `sarah-livebox` permet d'émuler la télécommande du décodeur TV Livebox.
 
-télécharger, extraire puis copier le repertoire **sarah-livebox** dans le dossier `\sarah\viseo-bot-framework\node_modules\`
+### Installation :
 
-relancer sarah
+- Télécharger, extraire puis copier le repertoire **Livebox-V5** dans le dossier `\sarah\viseo-bot-framework\node_modules\`.
+- Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le module (node) **SARAH** (win-sarah).
+- Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
 
-### configuration du module :
+### Configuration du module :
 
 renseigner l'adresse ip et le port du serveur domoticz.
 
