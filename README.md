@@ -22,7 +22,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 - Renseigner :
 
   - L'adresse **IP** du décodeur.
--  - Le numéro du **port** qui est le **8080** par défaut n'est généralement pas à changer !
+  - Le numéro du **port** qui est le **8080** par défaut, n'est généralement pas à changer !
 
 ### Inputs
 
