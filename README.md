@@ -71,12 +71,12 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 ### Utilisation
 
 - Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
-- Parmis les principales nous avons :
+- Exemples :
 
-    sarah {allumes,eteins} la {box,livebox}
+    ```sarah {allumes,eteins} la {box,livebox}```
 
-    sarah mets {la, la chaine, le programme} {3, france 3}
+    ```sarah mets {la, la chaine, le programme} {3, france 3}```
 
-    sarah appui sur la touche 1 de la {box, livebox}
+    ```sarah appui sur la touche 1 de la {box, livebox}```
 
-    sarah monte le son de la {box, livebox}
+    ```sarah monte le son de la {box, livebox}```
