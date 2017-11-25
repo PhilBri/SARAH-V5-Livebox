@@ -6,7 +6,7 @@
 
 ### Module Node-Red pour S.A.R.A.H V5
 
-Le module `LiveboxRemote` permet d'émuler la télécommande du décodeur TV Livebox.
+Le module `sarah-livebox` permet d'émuler la télécommande du décodeur TV Livebox.
 
 ## Installation
 
