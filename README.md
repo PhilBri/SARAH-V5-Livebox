@@ -12,7 +12,7 @@ Le module `LiveboxRemote` permet d'émuler la télécommande du décodeur TV Liv
 
 - Télécharger, extraire puis copier le repertoire **Livebox-V5** dans le dossier `\sarah\viseo-bot-framework\node_modules\`.
 
-- Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le node **SARAH** (win-sarah).
+- Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le module **SARAH** (win-sarah).
 Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 - Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
@@ -30,7 +30,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 ## Inputs
 
-Aprés reconnaissance vocale, le node **SARAH** retourne l'objet ci-dessous selon les paramétres du fichier **sarah-livebox.xml**.
+Aprés reconnaissance vocale, le module **SARAH** (win-sarah) retourne l'objet ci-dessous selon les paramétres du fichier **sarah-livebox.xml**.
 
 - `msg.payload` : {JSON} **"options"**
 
@@ -88,7 +88,7 @@ Aprés reconnaissance vocale, le node **SARAH** retourne l'objet ci-dessous selo
 
 - `msg.speak`: {JSON} **"tts"**
 
-  - Texte à lire par le node <code>Speak</code> (win-speak), ou autre...
+  - Texte à lire par le module **Speak** (win-speak), ou autre...
 
 ## Utilisation
 
