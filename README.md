@@ -22,33 +22,36 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 <img src="../master/images/liveboxconfig.PNG" width="50%" height="50%"/>
 
 - Renseigner :
+
   - L'adresse **IP** du décodeur.
   - Le numéro du **port** qui est le **8080** par défaut n'est généralement pas à changer !
 
 ### Inputs
 
-- `msg.payload.options.plugin`:
-**livebox**
+- `msg.payload.options.plugin`=> **livebox**
+
   - A utiliser avec un module **switch** pour rediriger vers le bon plugin...
   - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**
 
-- `msg.payload.options.action`:
+- `msg.payload.options.stby`=> **Retour d'état**
 
-**On** / **Off** / **temp** / **humidity**
+  - Livebox allumée ou en veille ?
+  - Valeur de `out.action.stby` du fichier **sarah-livebox.xml**
 
-valeur de `out.action.action` du fichier **sarah-livebox.xml**
+- `msg.payload.options.cmd`=> **Commandes générales**.
 
-- `msg.payload.options.command`:
-
-**switch** / **status**
-
-valeur de `out.action.command` du fichier **sarah-livebox.xml**
+  - Correspond à l'appui "physique" sur les touches de la télécommande (Volume, digits, prog, etc...).
+  - Valeur de `out.action.cmd` du fichier **sarah-livebox.xml**.
+  
+- `msg.payload.options.epg`=> **Appel direct des chaînes**.
+  - Permet d'appeler une chaîne directement, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
+  - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
 
 ### Outputs
 
-- Objet JSON `msg.payload`: renvoyé par win-sarah
+- `msg.payload`: renvoyé par le node <code>SARAH</code</code> (win-sarah)
 
-- Objet JSON `msg.speak`: texte à lire par win-speak (ou autre).
+- `msg.speak`: texte à lire par le node <code>Speak</code> (win-speak), ou autre...
 
 ### Utilisation:
 
