@@ -31,29 +31,42 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
   - A utiliser avec un module **switch** pour rediriger vers le bon plugin...
   - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**
 
-- `msg.payload.options.stby`=> **Retour d'état**
+- `msg.payload.options.stby`=> {string} **"0"** ou **"1"**
 
   - Teste l'état de la Livebox : allumée ou en veille.
   - Valeur de `out.action.stby` du fichier **sarah-livebox.xml**
 
-- `msg.payload.options.cmd`=> **Commandes générales**.
+- `msg.payload.options.cmd`=> {string} **"commandes"**
 
   - Correspond à l'appui "physique" sur les touches de la télécommande (Volume, digits, prog, etc...).
   - Valeur de `out.action.cmd` du fichier **sarah-livebox.xml**.
   
-- `msg.payload.options.epg`=> **Appel direct des chaînes**.
+- `msg.payload.options.epg`=> {string} **"code\_EPG\_de\_la\_chaîne"**.
 
-  - Permet d'appeler une chaîne directement, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
+  - Permet d'appeler une chaîne directement grâce à son code **EPG**, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
   - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
 
 ### Outputs
 
-- `msg.payload`=> **Résultat de l'action**
+- `msg.payload`=> {JSON} **"result"**
 
   - Retour de la livebox concernant la commande envoyée.
-    - Exemple si ok :
+  exemple:
+  
+  ```JSON
+  {
+    "result":
+      {
+        "responseCode": "0",
+        "message": "ok",
+        "data":
+        {}
+      }
+  }
+  ```
 
-- `msg.speak`: texte à lire par le node <code>Speak</code> (win-speak), ou autre...
+- `msg.speak`: {JSON} **"tts"**
+  - Texte à lire par le node <code>Speak</code> (win-speak), ou autre...
 
 ### Utilisation:
 
