@@ -19,7 +19,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 - Renseigner l'adresse ip et le port du serveur domoticz.
 
-![Config Module](../master/images/livebox config.png)
+<img src="../master/images/liveboxconfig.PNG" width="20%" height="20%"/>
 
 Copier le fichier xml **./grammar/sarah-domoticz.xml** dans le dossier grammar configuré sur le module **win-sarah**
 
