@@ -30,7 +30,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 ## Inputs
 
-Aprés reconnaissance vocale, le node **SARAH** retourne l'objet suivant selon les directives notées dans le fichier **sarah-livebox.xml**.
+Aprés reconnaissance vocale, le node **SARAH** retourne l'objet ci-dessous selon les paramétres du fichier **sarah-livebox.xml**.
 
 - `msg.payload` : {JSON} **"options"**
 
