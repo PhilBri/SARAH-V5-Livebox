@@ -1,4 +1,4 @@
-<img src="../master/images/liveboxnode.PNG" width="50%" height="50%"/># SARAH-V5-Livebox
+# <img src="../master/images/liveboxnode.PNG" width="20%" height="20%"/> SARAH-V5-Livebox
 
 Node-RED node to connect Sarah framework to Orange Livebox TV decoder.
 ![](../master/images/liveboxnode.PNG)
