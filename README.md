@@ -29,6 +29,17 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 ### Inputs
 
 Aprés reconnaissance vocale, le node **SARAH** retourne l'objet suivant :
+    ```json
+    Exemple de retour = Envoyer commande pour couper le son (mute)...
+    {
+      "options":
+        {
+          "plugin": "livebox",
+          "cmd": "Mute"
+        }
+    }
+    ```
+
 
 - `msg.payload` : {JSON} **"options"**
 
