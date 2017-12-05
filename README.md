@@ -76,7 +76,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 Retour de la Livebox concernant la commande envoyée et du texte à prononcer.
 
 - `msg.payload` : {JSON} **"options"**
-  
+
   ##### Exemple de retour *→* Commande envoyée ok.
   
     ```json
