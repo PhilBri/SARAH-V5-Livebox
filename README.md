@@ -8,7 +8,7 @@
 
 Le module `sarah-livebox` permet d'émuler la télécommande du décodeur TV Livebox.
 
-## Installation
+## ★ Installation
 
 - Télécharger, extraire puis copier le repertoire **sarah-livebox** dans le dossier `\sarah\viseo-bot-framework\node_modules\`.
 
@@ -17,7 +17,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 - Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
 
-## Configuration du module <img src="./images/liveboxnode.svg" width="13%" height="13%"/>
+## ★ Configuration du module <img src="./images/liveboxnode.svg" width="13%" height="13%"/>
 
 - Ouvrez l'onglet de l'editeur comme ci-dessous.
 
@@ -28,7 +28,7 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
   - <code>Host</code> : L'adresse **IP** du décodeur.
   - <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
 
-## Inputs
+### Inputs
 
 Aprés reconnaissance vocale, le module **SARAH** (win-sarah) retourne l'objet ci-dessous selon les paramétres du fichier **sarah-livebox.xml**.
 
@@ -90,7 +90,7 @@ Aprés reconnaissance vocale, le module **SARAH** (win-sarah) retourne l'objet c
 
   - Texte à lire par le module **Speak** (win-speak), ou autre...
 
-## Utilisation
+## ★ Utilisation
 
 - Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
 - Exemples :
@@ -103,11 +103,11 @@ Aprés reconnaissance vocale, le module **SARAH** (win-sarah) retourne l'objet c
 
     ```sarah monte le son de la {box, livebox}```
 
-## Compatibilité
+## ★ Compatibilité
 
 Normalement, tous les decodeurs Orange Livebox sont compatibles.
 
-## Restrictions
+## ★ Restrictions
 
-Le décodeur TV V4 ne peux pas (pour l'instant) être allumé lorsqu'il est en veille profonde...
+Le décodeur TV V5 ne peux pas (pour l'instant) être allumé lorsqu'il est en veille profonde...
 Il vous faudra donc l'allumer manuelement avant de l'utiliser...
