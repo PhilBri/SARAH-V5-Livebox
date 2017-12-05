@@ -77,13 +77,7 @@ Retour de la Livebox concernant la commande envoyée et du texte à prononcer.
 
 - `msg.payload` : {JSON} **"options"**
 
-  #### Exemple de retour **→** Commande OK.
-  
-  
-
-- `msg.payload` : {JSON} **"options"**
-
-  ##### Exemple de retour *→* Commande envoyée ok.
+  ##### Exemple de retour **→** Commande OK.
   
     ```json
     {
