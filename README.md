@@ -47,14 +47,15 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
         }
     }
     ```
-##### La valeur *`plugin`* est toujours présente dans le retour.
+#### La valeur *`plugin`* est toujours présente dans le retour.
 
 - `msg.payload.options.plugin` : {string} **"livebox"**.
 
-  - A utiliser avec un module **switch** pour rediriger vers le bon plugin...
+  - Le module teste la valeur ```livebox``` pour valider si la commande le concerne bien...
+  - Nul besoin d'un module **switch** pour rediriger vers le bon plugin...
   - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**
   
-##### Les valeurs *`stby`*, *`cmd`* et *`epg`* sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
+#### Les valeurs *`stby`*, *`cmd`* et *`epg`* sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
 
 - `msg.payload.options.stby` : {string} **"0"** ou **"1"**
 
@@ -75,10 +76,11 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 - `msg.payload` : {JSON} **"result"**
 
-   - Retour de la livebox concernant la commande envoyée.
+   - Retour de la Livebox concernant la commande envoyée et du texte à prononcer.
+   
+   ##### Exemple de retour *→* commande envoyée, traitée et OK...
   
     ```json
-    Exemple de retour = commande envoyée traitée et OK...
     {
       "result":
         {
@@ -91,7 +93,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 - `msg.speak`: {JSON} **"tts"**
 
-  - Texte à lire par le module **Speak** (win-speak), ou autre...
+  - Text-To-Speech destiné au module **SARAH** (win-speak), ou autre...
 
 ## ★ Utilisation
 
