@@ -4,7 +4,7 @@
 >
 > <img src="./images/liveboxnode.svg" width="20%" height="20%"/>
 
-### ★ Module Node-Red pour S.A.R.A.H V5
+### Module Node-Red pour S.A.R.A.H V5
 
 Le module `sarah-livebox` permet d'émuler la télécommande du décodeur TV Livebox.
 
@@ -28,14 +28,17 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
   - <code>Host</code> : L'adresse **IP** du décodeur.
   - <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
 
+## ★ Fontionnement
+
 ### Inputs
 
-Aprés reconnaissance vocale, le module **SARAH** (win-sarah) retourne l'objet ci-dessous selon les paramétres du fichier **sarah-livebox.xml**.
+Aprés reconnaissance de la commande vocale - selon les paramétres du fichier **sarah-livebox.xml** - le module **SARAH** (win-sarah) passe l'objet ci-dessous en entrée.
 
 - `msg.payload` : {JSON} **"options"**
+  
+  ##### Exemple de retour pour la commande *→* ```SARAH coupe le son de la box``` (mute).
 
     ```json
-    Exemple de retour = Envoyer commande pour couper le son (mute)...
     {
       "options":
         {
