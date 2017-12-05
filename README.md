@@ -68,7 +68,7 @@ Aprés reconnaissance vocale, le module **SARAH** (win-sarah) retourne l'objet c
   - Permet d'appeler une chaîne directement grâce à son code **EPG**, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
   - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
 
-## Outputs
+### Outputs
 
 - `msg.payload` : {JSON} **"result"**
 
