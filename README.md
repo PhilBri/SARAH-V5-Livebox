@@ -4,7 +4,7 @@
 >
 > <img src="./images/liveboxnode.svg" width="20%" height="20%"/>
 
-### Module Node-Red pour S.A.R.A.H V5
+### ★ Module Node-Red pour S.A.R.A.H V5
 
 Le module `sarah-livebox` permet d'émuler la télécommande du décodeur TV Livebox.
 
