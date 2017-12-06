@@ -47,6 +47,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
         }
     }
     ```
+
 #### La valeur *`plugin`* est toujours présente dans le retour.
 
 - `msg.payload.options.plugin` : {string} **"livebox"**.
