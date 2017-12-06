@@ -90,7 +90,13 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
     }
     ```
 
-- `msg.speak`: {JSON} **"tts"**
+- `msg.payload`: {JSON} **"tts"**
+
+    ```json
+    {
+      "tts": "c'est fait"
+    }
+    ```
 
   - Text-To-Speech destiné au module **SARAH** (win-speak), ou autre...
 
