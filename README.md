@@ -1,8 +1,6 @@
-# SARAH-V5-Livebox (incomplet... en cours de publication...)
+# sarah-livebox
 
-> Node-RED node to connect Sarah framework to Orange Livebox TV decoder.
->
-> <img src="./images/liveboxnode.svg" width="20%" height="20%"/>
+<p align="center"><img src="./images/liveboxnode.svg" width="30%" height="30%"/></p>
 
 ### Module Node-Red pour S.A.R.A.H V5
 
