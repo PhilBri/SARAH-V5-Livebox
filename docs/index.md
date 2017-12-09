@@ -41,7 +41,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 - `msg.payload` : {JSON} **"options"**
 
-  ##### Exemple ➜ Commande vocale ```SARAH coupe le son de la box```.
+    _Exemple ➜ Commande vocale ```SARAH coupe le son de la box```_.
 
     ```json
     {
