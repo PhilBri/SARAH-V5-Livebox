@@ -14,9 +14,7 @@
 
 ## ★ Configuration du module 
 
-- Ouvrez l'onglet de l'editeur comme ci-dessous.
-    
-    _Double-cliquez sur_ : <img src="./images/liveboxnode.svg" width="13%" height="13%"/>
+- Double-cliquez sur <img src="./images/liveboxnode.svg" width="13%" height="13%"/> pour ouvrir l'éditeur du _node_.
 
   <img src="./images/liveboxconfig.PNG" width="50%" height="50%"/>
 
@@ -30,7 +28,7 @@
 
     Comme ci-dessous :
 
-    <img src="./images/nodes.png"/>
+    <img src="./images/nodes.PNG"/>
 
 ## ★ Fontionnement
 
