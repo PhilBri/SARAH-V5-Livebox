@@ -14,7 +14,7 @@
 
 ## ★ Configuration du module 
 
-- Double-cliquez sur <img src="./images/liveboxnode.svg" width="13%" height="13%"/> pour ouvrir l'éditeur du _node_.
+- Double-cliquez sur <img src="./images/liveboxnode.svg" width="13%" height="13%"/> pour en ouvrir l'éditeur...
 
   <img src="./images/liveboxconfig.PNG" width="50%" height="50%"/>
 
@@ -105,17 +105,18 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
     ```
 
   - Text-To-Speech destiné au module **SARAH** (win-speak), ou autre...
+  - Valeur aléatoire issue du fichier **ipCmd.js**, selon les commandes envoyées.
 
 ## ★ Utilisation
 
 - Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
 - Exemples :
 
-    ```sarah {allumes,eteins} la {box,livebox}```
+    ```sarah {allumes,éteins} la {box, livebox}```
 
     ```sarah mets {la, la chaine, le programme} {3, france 3}```
 
-    ```sarah appui sur la touche 1 de la {box, livebox}```
+    ```sarah appuie sur la touche 1 de la {box, livebox}```
 
     ```sarah monte le son de la {box, livebox}```
 
