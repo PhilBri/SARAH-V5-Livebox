@@ -127,5 +127,9 @@ Normalement, tous les decodeurs Orange Livebox sont compatibles.
 
 ## ★ Restrictions
 
-Le décodeur Livebox V5 ne peux pas (pour l'instant) être allumé lorsqu'il est en veille profonde...
+Le décodeur TV **Livebox V5** ne peux pas (pour l'instant) être allumé lorsqu'il est en veille profonde...
 Il vous faudra donc l'allumer manuelement avant de l'utiliser...
+
+## ★ License
+
+Logiciel libre sous [licence MIT](https://github.com/PhilBri/SARAH-V5-Livebox/blob/master/LICENSE) 
