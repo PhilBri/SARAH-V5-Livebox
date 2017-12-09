@@ -57,7 +57,8 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 - `msg.payload.options.plugin` : {string} **"livebox"**.
 
-  - Le module teste la valeur **livebox** pour valider la commande _(Nul besoin d'un module **switch** pour rediriger vers le bon plugin...)_.
+  - Le module teste la valeur **livebox** pour valider la commande.
+  - Nul besoin d'un module **switch** complémentaire pour rediriger vers ce plugin.
   - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**
   
 #### Les valeurs *`stby`*, *`cmd`* et *`epg`* sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
