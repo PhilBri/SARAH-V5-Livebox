@@ -1,6 +1,6 @@
 <p align="center"><img src="./images/liveboxnode.svg" width="30%" height="30%"/></p>
 
-> ### Module (node) Node-Red permettant à SARAH d'émuler la télécommande du décodeur TV Livebox.
+> ### Module (node) Node-Red permettant à **SARAH** d'émuler la télécommande du décodeur TV **Livebox**.
 
 ## ★ Installation
 
@@ -55,26 +55,22 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 #### La valeur *`plugin`* est toujours présente dans le retour.
 
-- `msg.payload.options.plugin` : {string} **"livebox"**.
-
+- `msg.payload.options.plugin` : {string} **"livebox"**
   - Le module teste la valeur **livebox** pour valider la commande.
   - Nul besoin d'un module **switch** complémentaire pour rediriger vers ce plugin.
-  - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**
+  - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**.
   
 #### Les valeurs *`stby`*, *`cmd`* et *`epg`* sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
 
 - `msg.payload.options.stby` : {string} **"0"** ou **"1"**
-
   - Teste l'état de la Livebox, allumée ou en veille.
-  - Valeur de `out.action.stby` du fichier **sarah-livebox.xml**
+  - Valeur de `out.action.stby` du fichier **sarah-livebox.xml**.
 
 - `msg.payload.options.cmd` : {string} **"commandes"**
-
   - Correspond à l'appui "physique" sur les touches de la télécommande (Volume, digits, prog, etc...).
   - Valeur de `out.action.cmd` du fichier **sarah-livebox.xml**.
   
-- `msg.payload.options.epg` : {string} **"code\_EPG\_de\_la\_chaîne"**.
-
+- `msg.payload.options.epg` : {string} **"code\_EPG\_de\_la\_chaîne"**
   - Permet d'appeler une chaîne directement grâce à son code **EPG**, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
   - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
 
@@ -111,15 +107,16 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 ## ★ Utilisation
 
 - Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
+
 - Exemples :
 
-    ```sarah {allumes,éteins} la {box, livebox}```
+    ```SARAH {allumes, éteins} la {box, livebox}```
 
-    ```sarah mets {la, la chaine, le programme} {3, france 3}```
+    ```SARAH mets {la, la chaine, le programme} {3, france 3}```
 
-    ```sarah appuie sur la touche 1 de la {box, livebox}```
+    ```SARAH appuie sur la touche 1 de la {box, livebox}```
 
-    ```sarah monte le son de la {box, livebox}```
+    ```SARAH monte le son de la {box, livebox}```
 
 ## ★ Compatibilité
 
