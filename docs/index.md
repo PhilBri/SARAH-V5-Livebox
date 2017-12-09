@@ -81,8 +81,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 ### Outputs
 
 Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le résultat de l'action.
-
-- `msg.payload` : {JSON} **"result"**
+#### - `msg.payload` : {JSON} **"result"**
   
   ##### Exemple ➜ Commande OK.
   
@@ -97,7 +96,7 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
     }
     ```
 
-- `msg.payload`: {JSON} **"tts"**
+#### - `msg.payload`: {JSON} **"tts"**
 
     ```json
     {
