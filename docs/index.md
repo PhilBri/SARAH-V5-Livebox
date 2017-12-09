@@ -55,7 +55,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 #### La valeur *`plugin`* est toujours présente dans le retour.
 
-- `msg.payload.options.plugin` : {string} **"livebox"**
+#### - `msg.payload.options.plugin` : {string} **"livebox"**
   
   - Le module teste la valeur **livebox** pour valider la commande.
   - Nul besoin d'un module **switch** complémentaire pour rediriger vers ce plugin.
