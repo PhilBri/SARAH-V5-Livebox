@@ -7,13 +7,16 @@
 1. Télécharger, extraire puis copier le repertoire **sarah-livebox** dans le dossier `\sarah\viseo-bot-framework\node_modules\`.
 
 2. Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le module **SARAH** (win-sarah).
-Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
+
+    Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 3. Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
 
-## ★ Configuration du module <img src="./images/liveboxnode.svg" width="13%" height="13%"/>
+## ★ Configuration du module 
 
 - Ouvrez l'onglet de l'editeur comme ci-dessous.
+    
+    _Double-cliquez sur_ : <img src="./images/liveboxnode.svg" width="13%" height="13%"/>
 
   <img src="./images/liveboxconfig.PNG" width="50%" height="50%"/>
 
@@ -21,6 +24,13 @@ Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
   - <code>Host</code> : L'adresse **IP** du décodeur.
   - <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
+
+- Reliez les nodes :
+    `SARAH` ➜ `sarah-livebox` ➜ `Speak`
+
+    Comme ci-dessous :
+
+    <img src="./images/nodes.png"/>
 
 ## ★ Fontionnement
 
