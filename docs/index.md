@@ -16,12 +16,12 @@
 
 - Double-cliquez sur <img src="./images/liveboxnode.svg" width="13%" height="13%"/> pour en ouvrir l'éditeur...
 
-  <img src="./images/liveboxconfig.PNG" width="50%" height="50%"/>
+    <img src="./images/liveboxconfig.PNG" width="50%" height="50%"/>
 
 - Renseigner les champs :
 
-  - <code>Host</code> : L'adresse **IP** du décodeur.
-  - <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
+    - <code>Host</code> : L'adresse **IP** du décodeur.
+    - <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
 
 ## ★ Configuration des liaisons
 
@@ -41,42 +41,42 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 - `msg.payload` : {JSON} **"options"**
 
-  ##### Exemple ➜ Commande vocale ```SARAH coupe le son de la box```.
-
-  ```json
-  {
-      "options":
-      {
-        "plugin": "livebox",
-        "cmd": "Mute"
-      }
-  }
+    ##### Exemple ➜ Commande vocale ```SARAH coupe le son de la box```.
+    
+    ```json
+    {
+        "options":
+        {
+            "plugin": "livebox",
+            "cmd": "Mute"
+        }
+    }
     ```
 
 #### La valeur *`plugin`* est toujours présente dans le retour.
 
-#### - `msg.payload.options.plugin` : {string} **"livebox"**
-  
-  - Le module teste la valeur **livebox** pour valider la commande.
-  - Nul besoin d'un module **switch** complémentaire pour rediriger vers ce plugin.
-  - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**.
+- `msg.payload.options.plugin` : {string} **"livebox"**
+
+    - Le module teste la valeur **livebox** pour valider la commande.
+    - Nul besoin d'un module **switch** complémentaire pour rediriger vers ce plugin.
+    - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**.
 
 #### Les valeurs *`stby`*, *`cmd`* et *`epg`* sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
 
-#### - `msg.payload.options.stby` : {string} **"0"** ou **"1"**
+- `msg.payload.options.stby` : {string} **"0"** ou **"1"**
 
-  - Teste l'état de la Livebox, allumée ou en veille.
-  - Valeur de `out.action.stby` du fichier **sarah-livebox.xml**.
+    - Teste l'état de la Livebox, allumée ou en veille.
+    - Valeur de `out.action.stby` du fichier **sarah-livebox.xml**.
 
-#### - `msg.payload.options.cmd` : {string} **"commandes"**
+- `msg.payload.options.cmd` : {string} **"commandes"**
 
-  - Correspond à l'appui "physique" sur les touches de la télécommande (Volume, digits, prog, etc...).
-  - Valeur de `out.action.cmd` du fichier **sarah-livebox.xml**.
+    - Correspond à l'appui "physique" sur les touches de la télécommande (Volume, digits, prog, etc...).
+    - Valeur de `out.action.cmd` du fichier **sarah-livebox.xml**.
 
-#### - `msg.payload.options.epg` : {string} **"code\_EPG\_de\_la\_chaîne"**
+- `msg.payload.options.epg` : {string} **"code\_EPG\_de\_la\_chaîne"**
 
-  - Permet d'appeler une chaîne directement grâce à son code **EPG**, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
-  - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
+    - Permet d'appeler une chaîne directement grâce à son code **EPG**, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
+    - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
 
 ### Outputs
 
@@ -101,26 +101,26 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 
     ```json
     {
-      "tts": "c'est fait"
+        "tts": "c'est fait"
     }
     ```
-
-  - Text-To-Speech destiné au module **SARAH** (win-speak), ou autre...
-  - Valeur aléatoire issue du fichier **ipCmd.js**, selon les commandes envoyées.
+    
+    - Text-To-Speech destiné au module **SARAH** (win-speak), ou autre...
+    - Valeur aléatoire issue du fichier **ipCmd.js**, selon les commandes envoyées.
 
 ## ★ Utilisation
 
 - Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
 
-- Exemples :
-
-    ```SARAH {allumes, éteins} la {box, livebox}```
-
-    ```SARAH mets {la, la chaine, le programme} {3, france 3}```
-
-    ```SARAH appuie sur la touche 1 de la {box, livebox}```
-
-    ```SARAH monte le son de la {box, livebox}```
+    - Exemples :
+    
+        ```SARAH {allumes, éteins} la {box, livebox}```
+        
+        ```SARAH mets {la, la chaine, le programme} {3, france 3}```
+        
+        ```SARAH appuie sur la touche 1 de la {box, livebox}```
+        
+        ```SARAH monte le son de la {box, livebox}```
 
 ## ★ Compatibilité
 
