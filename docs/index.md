@@ -132,4 +132,4 @@ Il vous faudra donc l'allumer manuelement avant de l'utiliser...
 
 ## ★ License
 
-Logiciel libre sous [licence MIT](https://github.com/PhilBri/SARAH-V5-Livebox/blob/master/LICENSE) 
+Logiciel libre sous [licence MIT](./LICENSE) 
