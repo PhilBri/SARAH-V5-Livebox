@@ -40,7 +40,7 @@
 Aprés reconnaissance de la commande vocale - selon les paramétres du fichier **sarah-livebox.xml** - le module **SARAH** (win-sarah) passe l'objet ci-dessous en entrée.
 
 - `msg.payload` : {JSON} **"options"**
-  
+
   ##### Exemple ➜ Commande vocale ```SARAH coupe le son de la box```.
 
     ```json
@@ -60,7 +60,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
   - Le module teste la valeur **livebox** pour valider la commande.
   - Nul besoin d'un module **switch** complémentaire pour rediriger vers ce plugin.
   - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**.
-  
+
 #### Les valeurs *`stby`*, *`cmd`* et *`epg`* sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
 
 - `msg.payload.options.stby` : {string} **"0"** ou **"1"**
@@ -72,13 +72,11 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
   - Correspond à l'appui "physique" sur les touches de la télécommande (Volume, digits, prog, etc...).
   - Valeur de `out.action.cmd` du fichier **sarah-livebox.xml**.
-  
-  
+
 - `msg.payload.options.epg` : {string} **"code\_EPG\_de\_la\_chaîne"**
 
   - Permet d'appeler une chaîne directement grâce à son code **EPG**, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
   - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
-
 
 ### Outputs
 
