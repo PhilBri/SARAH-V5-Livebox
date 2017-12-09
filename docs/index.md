@@ -63,17 +63,17 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 #### Les valeurs *`stby`*, *`cmd`* et *`epg`* sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
 
-- `msg.payload.options.stby` : {string} **"0"** ou **"1"**
+#### - `msg.payload.options.stby` : {string} **"0"** ou **"1"**
 
   - Teste l'état de la Livebox, allumée ou en veille.
   - Valeur de `out.action.stby` du fichier **sarah-livebox.xml**.
 
-- `msg.payload.options.cmd` : {string} **"commandes"**
+#### - `msg.payload.options.cmd` : {string} **"commandes"**
 
   - Correspond à l'appui "physique" sur les touches de la télécommande (Volume, digits, prog, etc...).
   - Valeur de `out.action.cmd` du fichier **sarah-livebox.xml**.
 
-- `msg.payload.options.epg` : {string} **"code\_EPG\_de\_la\_chaîne"**
+#### - `msg.payload.options.epg` : {string} **"code\_EPG\_de\_la\_chaîne"**
 
   - Permet d'appeler une chaîne directement grâce à son code **EPG**, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
   - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
