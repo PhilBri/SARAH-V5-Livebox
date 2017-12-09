@@ -23,7 +23,7 @@
   - <code>Host</code> : L'adresse **IP** du décodeur.
   - <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
 
-## ★ Configuration des liasons
+## ★ Configuration des liaisons
 
 - Pour terminer, il vous faudra relier les nodes **SARAH** (en entrée) et **Speak** (en sortie)
 
