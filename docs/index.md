@@ -25,7 +25,7 @@
 
 ## ★ Configuration des liaisons
 
-- Pour terminer, il vous faudra relier les nodes **SARAH** (en entrée) et **Speak** (en sortie)
+- Reliez les nodes **SARAH** (en entrée) et **Speak** (en sortie).
 
     `SARAH` ➜ `sarah-livebox` ➜ `Speak`
 
