@@ -41,9 +41,9 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 - `msg.payload` : {JSON} **"options"**
 
-  ##### Exemple ➜ Commande vocale `SARAH coupe le son de la box`.
+    ##### Exemple ➜ Commande vocale ```SARAH coupe le son de la box``.
 
-  ```json
+  ``` json
   {
       "options":
       {
@@ -51,7 +51,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
         "cmd": "Mute"
       }
   }
-    ```
+  ```
 
 #### La valeur *`plugin`* est toujours présente dans le retour.
 
@@ -86,7 +86,7 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 
     ##### Exemple ➜ Commande OK.
   
-    ```json
+    ``` json
     {
       "result":
         {
@@ -99,7 +99,7 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 
 - `msg.payload`: {JSON} **"tts"**
 
-    ```json
+    ``` json
     {
       "tts": "c'est fait"
     }
@@ -111,6 +111,7 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 ## ★ Utilisation
 
 - Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
+
 - Exemples :
 
     ```SARAH {allumes, éteins} la {box, livebox}```
