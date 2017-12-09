@@ -73,12 +73,13 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
   - Correspond à l'appui "physique" sur les touches de la télécommande (Volume, digits, prog, etc...).
   - Valeur de `out.action.cmd` du fichier **sarah-livebox.xml**.
   
+  
 - `msg.payload.options.epg` : {string} **"code\_EPG\_de\_la\_chaîne"**
 
   - Permet d'appeler une chaîne directement grâce à son code **EPG**, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
   - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
 
-    
+
 ### Outputs
 
 Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le résultat de l'action.
