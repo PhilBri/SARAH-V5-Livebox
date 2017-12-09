@@ -65,18 +65,18 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 - `msg.payload.options.stby` : {string} **"0"** ou **"1"**
 
-  - Teste l'état de la Livebox, allumée ou en veille.
-  - Valeur de `out.action.stby` du fichier **sarah-livebox.xml**.
+    - Teste l'état de la Livebox, allumée ou en veille.
+    - Valeur de `out.action.stby` du fichier **sarah-livebox.xml**.
 
 - `msg.payload.options.cmd` : {string} **"commandes"**
 
-  - Correspond à l'appui "physique" sur les touches de la télécommande (Volume, digits, prog, etc...).
-  - Valeur de `out.action.cmd` du fichier **sarah-livebox.xml**.
+    - Correspond à l'appui "physique" sur les touches de la télécommande (Volume, digits, prog, etc...).
+    - Valeur de `out.action.cmd` du fichier **sarah-livebox.xml**.
 
 - `msg.payload.options.epg` : {string} **"code\_EPG\_de\_la\_chaîne"**
 
-  - Permet d'appeler une chaîne directement grâce à son code **EPG**, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
-  - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
+    - Permet d'appeler une chaîne directement grâce à son code **EPG**, sans avoir à simuler d'appuis sur la ou les touches de la télécommande.
+    - Valeur de `out.action.epg` du fichier **sarah-livebox.xml**.
 
 ### Outputs
 
