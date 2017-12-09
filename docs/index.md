@@ -81,9 +81,10 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 ### Outputs
 
 Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le résultat de l'action.
-#### - `msg.payload` : {JSON} **"result"**
+
+- `msg.payload` : {JSON} **"result"**
   
-  ##### Exemple ➜ Commande OK.
+    ##### Exemple ➜ Commande OK.
   
     ```json
     {
@@ -96,7 +97,7 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
     }
     ```
 
-#### - `msg.payload`: {JSON} **"tts"**
+- `msg.payload`: {JSON} **"tts"**
 
     ```json
     {
@@ -110,6 +111,7 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 ## ★ Utilisation
 
 - Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
+
 - Exemples :
 
     ```SARAH {allumes, éteins} la {box, livebox}```
