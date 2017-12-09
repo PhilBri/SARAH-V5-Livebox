@@ -132,4 +132,4 @@ Il vous faudra donc l'allumer manuelement avant de l'utiliser...
 
 ## ★ License
 
-Logiciel libre sous [licence MIT](./LICENSE) 
+Logiciel libre sous [licence MIT](..blob/master/LICENSE) 
