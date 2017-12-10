@@ -41,17 +41,17 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 - `msg.payload` : {JSON} **"options"**
 
-    ##### Exemple ➜ Commande vocale ```SARAH coupe le son de la box``.
+   -  Exemple ➜ Commande vocale ```SARAH coupe le son de la box```.
 
-  ``` json
-  {
-      "options":
-      {
-        "plugin": "livebox",
-        "cmd": "Mute"
-      }
-  }
-  ```
+    ``` JSON
+    {
+        "options":
+        {
+            "plugin": "livebox",
+            "cmd": "Mute"
+        }
+    }
+    ```
 
 #### La valeur *`plugin`* est toujours présente dans le retour.
 
@@ -84,15 +84,15 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 
 - `msg.payload` : {JSON} **"result"**
 
-    ##### Exemple ➜ Commande OK.
-  
-    ``` json
+    - Exemple ➜ Commande OK.
+    
+    ``` JSON
     {
-      "result":
+        "result":
         {
-          "responseCode": "0",
-          "message": "ok",
-          "data": {}
+            "responseCode": "0",
+            "message": "ok",
+            "data": {}
         }
     }
     ```
@@ -101,12 +101,12 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 
     ``` json
     {
-      "tts": "c'est fait"
+        "tts": "c'est fait"
     }
     ```
-  
-  - Text-To-Speech destiné au module **SARAH** (win-speak), ou autre...
-  - Valeur aléatoire issue du fichier **ipCmd.js**, selon les commandes envoyées.
+    
+    - Text-To-Speech destiné au module **SARAH** (win-speak), ou autre...
+    - Valeur aléatoire issue du fichier **ipCmd.js**, selon les commandes envoyées.
 
 ## ★ Utilisation
 
