@@ -8,7 +8,7 @@
 
 2. Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le module **SARAH** (win-sarah).
 
-    - Par défaut, il s'agit du répertoire: `sarah\viseo-bot-project\data\grammar`.
+    Par défaut, il s'agit du répertoire: `sarah\viseo-bot-project\data\grammar`.
 
 3. Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
 
@@ -20,9 +20,8 @@
 
 - Renseigner les champs :
 
-    <code>Host</code> : L'adresse **IP** du décodeur.
-    
-    <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
+    - <code>Host</code> : L'adresse **IP** du décodeur.
+    - <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
 
 ## ★ Configuration des liaisons
 
@@ -41,7 +40,6 @@
 Aprés reconnaissance de la commande vocale - selon les paramétres du fichier **sarah-livebox.xml** - le module **SARAH** (win-sarah) passe l'objet ci-dessous en entrée.
 
 - `msg.payload` : {JSON} **"options"**
-
   ##### Exemple ➜ Commande vocale `SARAH coupe le son de la box`.
 
     ``` json
