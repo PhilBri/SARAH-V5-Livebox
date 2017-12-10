@@ -53,7 +53,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
     }
     ```
 
-  #### La valeur *`plugin`* est toujours présente dans le retour.
+#### La valeur *`plugin`* est toujours présente dans le retour.
 
 - `msg.payload.options.plugin` : {string} **"livebox"**
   
@@ -61,7 +61,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
   - Nul besoin d'un module **switch** complémentaire pour rediriger vers ce plugin.
   - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**.
 
-  #### Les valeurs *`stby`*, *`cmd`* et *`epg`* sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
+#### Les valeurs *`stby`*, *`cmd`* et *`epg`* sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
 
 - `msg.payload.options.stby` : {string} **"0"** ou **"1"**
 
@@ -86,33 +86,33 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 
   ##### Exemple ➜ Commande OK.
   
-    ``` JSON
-    {
-        "result":
-        {
-            "responseCode": "0",
-            "message": "ok",
-            "data": {}
-        }
-    }
-    ```
+  ``` JSON
+  {
+    "result":
+      {
+        "responseCode": "0",
+        "message": "ok",
+        "data": {}
+      }
+  }
+  ```
 
 - `msg.payload`: {JSON} **"tts"**
 
-    ``` json
-    {
-        "tts": "c'est fait"
-    }
-    ```
+  ``` json
+  {
+    "tts": "c'est fait"
+  }
+  ```
     
-    - Text-To-Speech destiné au module **SARAH** (win-speak), ou autre...
-    - Valeur aléatoire issue du fichier **ipCmd.js**, selon les commandes envoyées.
+  - Text-To-Speech destiné au module **SARAH** (win-speak), ou autre...
+  - Valeur aléatoire issue du fichier **ipCmd.js**, selon les commandes envoyées.
 
 ## ★ Utilisation
 
-- Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
+  - Les commandes disponibles sont listées dans le fichier **sarah-livebox.xml**.
 
-- Exemples :
+  - Exemples :
 
     ```SARAH {allumes, éteins} la {box, livebox}```
 
