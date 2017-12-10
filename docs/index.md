@@ -41,7 +41,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 - `msg.payload` : {JSON} **"options"**
 
-   -  Exemple ➜ Commande vocale ```SARAH coupe le son de la box```.
+   Exemple ➜ Commande vocale ```SARAH coupe le son de la box```.
 
     ``` JSON
     {
@@ -84,7 +84,7 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 
 - `msg.payload` : {JSON} **"result"**
 
-    - Exemple ➜ Commande OK.
+    Exemple ➜ Commande OK.
     
     ``` JSON
     {
