@@ -7,8 +7,8 @@
 1. Télécharger, extraire puis copier le repertoire **sarah-livebox** dans le dossier `\sarah\viseo-bot-framework\node_modules\`.
 
 2. Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le module **SARAH** (win-sarah).
-
-  Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
+  
+    Par defaut, il s'agit du répertoire `sarah\viseo-bot-project\data\grammar`.
 
 3. Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
 
@@ -16,12 +16,12 @@
 
 - Double-cliquez sur <img src="./images/liveboxnode.svg" width="13%" height="13%"/> pour en ouvrir l'éditeur...
 
-  <img src="./images/liveboxconfig.PNG" width="50%" height="50%"/>
+    <img src="./images/liveboxconfig.PNG" width="50%" height="50%"/>
 
 - Renseigner les champs :
 
-  - <code>Host</code> : L'adresse **IP** du décodeur.
-  - <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
+    - <code>Host</code> : L'adresse **IP** du décodeur.
+    - <code>Port</code> : Le numéro du **Port** qui est le **8080** par défaut, n'est généralement pas à changer !
 
 ## ★ Configuration des liaisons
 
@@ -41,7 +41,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 - `msg.payload` : {JSON} **"options"**
 
-   Exemple ➜ Commande vocale ```SARAH coupe le son de la box```.
+    ##### Exemple ➜ Commande vocale `SARAH coupe le son de la box`.
 
     ``` json
     {
