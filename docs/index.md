@@ -40,9 +40,10 @@
 Aprés reconnaissance de la commande vocale - selon les paramétres du fichier **sarah-livebox.xml** - le module **SARAH** (win-sarah) passe l'objet ci-dessous en entrée.
 
 ### - `msg.payload` : {JSON} **"options"**
+  
   ##### Exemple ➜ Commande vocale `SARAH coupe le son de la box`.
 
-    ``` json
+  ``` json
     {
         "options":
         {
@@ -50,7 +51,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
             "cmd": "Mute"
         }
     }
-    ```
+  ```
 
 #### La valeur *`plugin`* est toujours présente dans le retour.
 
@@ -81,9 +82,9 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
 Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le résultat de l'action.
 
-- `msg.payload` : {JSON} **"result"**
+### - `msg.payload` : {JSON} **"result"**
 
-  ##### Exemple ➜ Commande OK.
+    ##### Exemple ➜ Commande OK.
   
   ``` json
   {
@@ -96,7 +97,7 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
   }
   ```
 
-- `msg.payload`: {JSON} **"tts"**
+### - `msg.payload`: {JSON} **"tts"**
 
   ``` json
   {
