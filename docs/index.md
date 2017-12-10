@@ -53,7 +53,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
     }
     ```
 
-#### La valeur *`plugin`* est toujours présente dans le retour.
+  #### La valeur *`plugin`* est toujours présente dans le retour.
 
 - `msg.payload.options.plugin` : {string} **"livebox"**
   
@@ -61,7 +61,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
   - Nul besoin d'un module **switch** complémentaire pour rediriger vers ce plugin.
   - Valeur de `out.action.plugin` du fichier **sarah-livebox.xml**.
 
-#### Les valeurs *`stby`*, *`cmd`* et *`epg`* sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
+  #### Les valeurs *`stby`*, *`cmd`* et *`epg`* sont présentes dans le retour suivant les cas et les commandes à envoyer à la livebox.
 
 - `msg.payload.options.stby` : {string} **"0"** ou **"1"**
 
@@ -84,8 +84,8 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 
 - `msg.payload` : {JSON} **"result"**
 
-    Exemple ➜ Commande OK.
-    
+  ##### Exemple ➜ Commande OK.
+  
     ``` JSON
     {
         "result":
@@ -129,6 +129,7 @@ Normalement, tous les decodeurs Orange Livebox sont compatibles.
 ## ★ Restrictions
 
 Le décodeur TV **Livebox V5** ne peux pas (pour l'instant) être allumé lorsqu'il est en veille profonde...
+
 Il vous faudra donc l'allumer manuelement avant de l'utiliser...
 
 ## ★ License
