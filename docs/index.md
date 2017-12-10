@@ -43,7 +43,7 @@ Aprés reconnaissance de la commande vocale - selon les paramétres du fichier *
 
    Exemple ➜ Commande vocale ```SARAH coupe le son de la box```.
 
-    ``` JSON
+    ``` json
     {
         "options":
         {
@@ -86,7 +86,7 @@ Aprés l'envoi de la requète à la Livebox, le module renvoie (en sortie) le r�
 
   ##### Exemple ➜ Commande OK.
   
-  ``` JSON
+  ``` json
   {
     "result":
       {
