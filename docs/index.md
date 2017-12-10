@@ -40,8 +40,8 @@
 Aprés reconnaissance de la commande vocale - selon les paramétres du fichier **sarah-livebox.xml** - le module **SARAH** (win-sarah) passe l'objet ci-dessous en entrée.
 
 ### - `msg.payload` : {JSON} **"options"**
-  
-    ##### Exemple ➜ Commande vocale `SARAH coupe le son de la box`.
+
+    Exemple ➜ Commande vocale `SARAH coupe le son de la box`.
 
   ``` json
     {
