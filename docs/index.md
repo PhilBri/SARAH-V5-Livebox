@@ -6,9 +6,7 @@
 
 1. Télécharger, extraire puis copier le repertoire **sarah-livebox** dans le dossier `\sarah\viseo-bot-framework\node_modules\`.
 
-2. Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le module **SARAH** (win-sarah).
-
-    Par défaut, il s'agit du répertoire: `sarah\viseo-bot-project\data\grammar`.
+2. Copier le fichier **./grammar/sarah-livebox.xml** dans le dossier configuré dans le module **SARAH** (win-sarah). Par défaut, il s'agit du répertoire: `sarah\viseo-bot-project\data\grammar`.
 
 3. Relancez via la commande **start.bat** et actualisez l'onglet de votre explorateur.
 
@@ -128,7 +126,7 @@ Normalement, tous les decodeurs Orange Livebox sont compatibles.
 
 ## ★ Restrictions
 
-Le décodeur TV **Livebox V5** ne peux pas (pour l'instant) être allumé lorsqu'il est en veille profonde...
+Le décodeur TV **Livebox V4** (modèle **WHD93**) ne peux pas (pour l'instant) être allumé lorsqu'il est en veille profonde...
 
 Il vous faudra donc l'allumer manuelement avant de l'utiliser...
 
