@@ -31,7 +31,7 @@
 
     <img src="./images/nodes.PNG"/>
 
-## ★ Fontionnement
+## ★ Fonctionnement
 
 ### Inputs
 
