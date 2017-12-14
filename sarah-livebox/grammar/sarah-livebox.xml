@@ -28,10 +28,10 @@
         <tag>out.action.plugin='livebox';</tag>
 
         <one-of>
-            <item>Allume<tag>out.action.stby='0';out.action.cmd="Shutdown";</tag></item>
-            <item>Met<tag>out.action.stby='0';out.action.cmd="Shutdown";</tag></item>
-            <item>Eteint<tag>out.action.stby='1';out.action.cmd="Shutdown";</tag></item>
-            <item>Coupe<tag>out.action.stby='1';out.action.cmd="Shutdown";</tag></item>
+            <item>Allume<tag>out.action.stby='0';</tag></item>
+            <!-- <item>Met<tag>out.action.stby='0';</tag></item> -->
+            <item>éteins<tag>out.action.stby='1';</tag></item>
+             <!--<item>Coupe<tag>out.action.stby='1';</tag></item> -->
         </one-of>
 
         <item><ruleref uri="#ruleName"/></item>
@@ -44,23 +44,23 @@
         <tag>out.action.plugin='livebox';</tag>
 
         <one-of>
-            <item>Met</item>
+            <item>Mets</item>
             <item>Passe</item>
-            <item>zap</item>
+            <item>Zap sur</item>
         </one-of>
 
         <one-of>
             <item>le</item>
             <item>la</item>
-            <item>a</item>
             <item>au</item>
+            <item>a la</item>
             <item>sur le</item>
             <item>sur la</item>
         </one-of>
 
         <one-of>
-            <item>Programme</item>
-            <item>Chaine</item>
+            <item>programme</item>
+            <item>chaine</item>
         </one-of>
 
         <one-of>
@@ -148,7 +148,7 @@
 
         <one-of>
             <item>Mets</item>
-            <item>bascule</item>
+            <item>Bascule</item>
             <item>Affiche</item>
             <item>Zap</item>
         </one-of>
@@ -171,7 +171,7 @@
         </item>
 
         <one-of>
-            <item>1<tag>out.action.epg = "192";</tag></item>
+            <item>un<tag>out.action.epg = "192";</tag></item>
             <item>TF1<tag>out.action.epg = "192";</tag></item>
 
             <item>2<tag>out.action.epg = "4";</tag></item>
