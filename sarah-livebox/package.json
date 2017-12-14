@@ -1,19 +1,24 @@
 {
-    "name"          : "sarah-livebox",
-    "version"       : "0.1",
-    "description"   : "Node-RED node to connect Sarah framework to Orange Livebox TV decoder",
-    "dependencies"  : {
+    "name": "sarah-livebox",
+    "version": "0.1",
+    "description": "Node-RED node to connect Sarah framework to Orange Livebox TV decoder",
+    "homepage": "https://philbri.github.io/SARAH-V5-Livebox",
+    "dependencies": {
+
     },
-    "keywords"      : ["node-red", "sarah", "livebox", "tv", "orange"],
-    "license"       : "MIT",
-    "node-red"      : {
-        "version"       : ">=0.1",
-        "nodes"         : {
-            "sarah-livebox"     : "sarah-livebox.js"
+    "keywords": ["node-red", "sarah", "livebox", "tv", "orange"],
+    "license": {
+        "type": "MIT",
+        "url": "https://www.opensource.org/licenses/mit-license.php"
+    },
+    "node-red": {
+        "version": ">=0.1",
+        "nodes": {
+            "sarah-livebox": "sarah-livebox.js"
         }
     },
-    "author"        : {
-        "name"          : "Phil Bri",
-        "email"         : "phil.bri@hotmail.com"
+    "author": {
+        "name": "Phil Bri",
+        "email": "phil.bri@hotmail.com"
     }
 }
