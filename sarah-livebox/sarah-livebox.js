@@ -50,7 +50,6 @@ module.exports = function (RED) {
 
         node.on ('input', function (msg) {
             var box_Cmd = ['operation=10'];
-            var okPlugin;
             var box_Msg = msg.payload.options;
 
             if (!msg.payload.hasOwnProperty('options') || !box_Msg.hasOwnProperty('plugin') || box_Msg['plugin'] != 'livebox') return;
