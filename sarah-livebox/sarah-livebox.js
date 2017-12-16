@@ -1,4 +1,3 @@
-
 module.exports = function (RED) {
     var request = require ('request');
     var ipCmd = require ('./ipCmd');
@@ -62,11 +61,9 @@ module.exports = function (RED) {
                         if (node.standbyState == 1) return (msg = {payload: ipCmd['nobox']});
                         box_Cmd.unshift ('operation=01&key=' + ipCmd[box_Msg[key]].replace (':', '&mode='));
                         break;
-
                     case ('epg'):
                         box_Cmd.unshift ('operation=09&epg_id=' + "*".repeat (10 - (box_Msg[key].length)) + box_Msg[key] + '&uui=1');
                         break;
-
                     case ('stby'):
                         if (box_Msg[key] == node.standbyState) return node.send (msg = {payload: ipCmd[key][box_Msg[key]]});
                         var item = ipCmd['Shutdown'].split(':').join('&mode').split(',');
