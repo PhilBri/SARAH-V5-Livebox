@@ -5,16 +5,11 @@ module.exports = function (RED) {
 
     function sarahlivebox (config) {
         RED.nodes.createNode (this, config);
-
-        // Configuration options passed by Node Red
-        this.name = config.name;
         this.host = config.host;
         this.port = config.port;
-        // Init. Livebox statuses
         this.boxConnected = false;
         this.friendlyName = undefined;
         this.standbyState = undefined;
-
         var node = this;
         var boxUrl = "http://" + node.host + ':' + node.port + '/remoteControl/cmd?';
 
@@ -43,7 +38,6 @@ module.exports = function (RED) {
                         node.friendlyName = msg.payload.data.friendlyName;
                         node.standbyState = msg.payload.data.activeStandbyState;
                     }
-
                     node.status ({
                         fill: 'green',
                         shape: 'dot',
@@ -59,11 +53,8 @@ module.exports = function (RED) {
             var okPlugin;
             var box_Msg = msg.payload.options;
 
-            // Right plugin msg test
             if (!msg.payload.hasOwnProperty('options') || !box_Msg.hasOwnProperty('plugin') || box_Msg['plugin'] != 'livebox') return;
-
             node.sendBox (box_Cmd, (clbk) => {});
-
             if (!node.boxConnected) return node.send (msg = {payload: ipCmd['error']});
 
             for (var key in box_Msg) {
@@ -79,7 +70,6 @@ module.exports = function (RED) {
 
                     case ('stby'):
                         if (box_Msg[key] == node.standbyState) return node.send (msg = {payload: ipCmd[key][box_Msg[key]]});
-
                         var item = ipCmd['Shutdown'].split(':').join('&mode').split(',');
                         while (item.length) {
                             box_Cmd.unshift('operation=01&key=' + item.shift());
@@ -87,23 +77,20 @@ module.exports = function (RED) {
                         break;
                 }
             }
-
-            sendData (box_Cmd);
-
             function sendData (box_Cmd) {
                 setTimeout (function () {
                     node.sendBox (box_Cmd.shift(), function (clbk) {
                         if (clbk.payload.responseCode != 0) {
-                            node.error (clbk)
+                            node.error (clbk);
                             return node.send (msg = {payload: ipCmd['cmdErr']});
                         }
                         box_Cmd.length ? sendData (box_Cmd) : node.send (msg = {payload: ipCmd[key][Math.floor (Math.random() * ipCmd[key].length)]});
                     });
                 }, 500);
             }
+            sendData (box_Cmd);
         });
 
-        // Init
         setTimeout (function () {
             node.sendBox ('operation=10', (clbk) => {});
         }, 400);
